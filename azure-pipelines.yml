@@ -41,5 +41,5 @@ steps:
 
 - task: CavissonCodeAnalyzer@1
   inputs:
-      cavissonAnalyzerServiceConnection: 'cav'
+      cavissonAnalyzerServiceConnection: 'cav1'
       project: 'new_proj'
