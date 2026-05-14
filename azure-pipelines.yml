@@ -38,3 +38,8 @@ steps:
     pathToPublish: '.'
     artifactName: 'AccessibilityReport'
   displayName: 'Publish Accessibility Report'
+
+- task: CavissonCodeAnalyzer@1
+  inputs:
+      cavissonAnalyzerServiceConnection: 'cav'
+      project: 'new_proj'
