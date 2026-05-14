@@ -1,0 +1,23 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+# Cavisson Extension Task
+- task: CavissonCodeAnalyzer@1
+  inputs:
+    cavissonAnalyzerServiceConnection: 'cav'
+    project: 'new_proj'
+
+# Simple test script
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+# Multi-line script
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
