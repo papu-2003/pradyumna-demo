@@ -6,9 +6,9 @@ pool:
 
 steps:
 
-# Build Docker image
+# Build Docker Image
 - script: |
-    docker build -t axe-scanner -f task/Dockerfile .
+    docker build -t axe-scanner .
   displayName: Build Accessibility Scanner Image
 
 # Run Accessibility Scanner Extension
