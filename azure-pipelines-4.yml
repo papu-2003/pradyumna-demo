@@ -6,12 +6,12 @@ pool:
 
 steps:
 
-# Build Docker Image
+# Build Docker image
 - script: |
-    docker build -t axe-scanner .
+    docker build -t axe-scanner -f task/Dockerfile .
   displayName: Build Accessibility Scanner Image
 
-# Run Accessibility Scanner
+# Run Accessibility Scanner Extension
 - task: CavissonAccessibilityScanner@1
   displayName: Run Accessibility Scan
   inputs:
