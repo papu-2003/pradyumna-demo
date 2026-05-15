@@ -6,6 +6,6 @@ pool:
 
 steps:
 
-- task: AccessibilityScanner@1
+- task: CavissonAccessibilityScanner@1
   inputs:
     targetUrl: 'https://www.cricbuzz.com/'
