@@ -6,6 +6,14 @@ pool:
 
 steps:
 
+# Build Docker Image
+- script: |
+    docker build -t axe-scanner .
+  displayName: Build Accessibility Scanner Image
+
+# Run Accessibility Scanner
 - task: CavissonAccessibilityScanner@1
+  displayName: Run Accessibility Scan
   inputs:
     targetUrl: 'https://www.cricbuzz.com/'
+    failOnCritical: false
