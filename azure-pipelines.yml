@@ -39,7 +39,3 @@ steps:
     artifactName: 'AccessibilityReport'
   displayName: 'Publish Accessibility Report'
 
-- task: CavissonCodeAnalyzer@1
-  inputs:
-      cavissonAnalyzerServiceConnection: 'cav1'
-      project: 'new_proj'
