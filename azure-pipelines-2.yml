@@ -1,0 +1,20 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+# Run Custom Accessibility Extension Task
+- task: AccessibilityScanner@1
+  displayName: 'Run Accessibility Scanner'
+  inputs:
+    targetUrl: 'https://www.cricbuzz.com'
+
+# Publish HTML Report
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Accessibility HTML Report'
+  inputs:
+    pathToPublish: '$(System.DefaultWorkingDirectory)'
+    artifactName: 'AccessibilityReport'
