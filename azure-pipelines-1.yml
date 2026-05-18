@@ -1,0 +1,11 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: AccessibilityScanner@1
+  inputs:
+    targetUrl: 'https://www.cricbuzz.com'
