@@ -6,22 +6,15 @@ pool:
 
 steps:
 
-# Run Accessibility Scanner Extension Task
+# Run Accessibility Scanner
 - task: AccessibilityScanner@1
   displayName: 'Run Accessibility Scanner'
   inputs:
     targetUrl: 'https://www.cricbuzz.com'
 
-# Publish JSON Report
+# Publish Accessibility Reports
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish JSON Report'
+  displayName: 'Publish Accessibility Reports'
   inputs:
-    pathToPublish: '$(System.DefaultWorkingDirectory)/_temp'
-    artifactName: 'AccessibilityJSON'
-
-# Publish HTML Report
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish HTML Report'
-  inputs:
-    pathToPublish: '$(System.DefaultWorkingDirectory)/_temp'
-    artifactName: 'AccessibilityHTML'
+    pathToPublish: '$(System.DefaultWorkingDirectory)/task/scanner/reports'
+    artifactName: 'AccessibilityReports'
