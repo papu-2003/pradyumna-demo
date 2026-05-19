@@ -1,0 +1,21 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+# Run Accessibility Scanner Extension
+- task: AccessibilityScanner@1
+  displayName: 'Run Accessibility Scanner'
+  inputs:
+    targetUrl: 'https://www.cricbuzz.com'
+
+# Publish Accessibility Reports
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Accessibility Reports'
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'AccessibilityReports'
+    publishLocation: 'Container'
