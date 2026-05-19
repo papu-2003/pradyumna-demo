@@ -6,15 +6,13 @@ pool:
 
 steps:
 
-# Run Accessibility Scanner
 - task: AccessibilityScanner@1
   displayName: 'Run Accessibility Scanner'
   inputs:
     targetUrl: 'https://www.cricbuzz.com'
 
-# Publish Accessibility Reports
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Accessibility Reports'
   inputs:
-    pathToPublish: '$(System.DefaultWorkingDirectory)/task/scanner/reports'
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'AccessibilityReports'
