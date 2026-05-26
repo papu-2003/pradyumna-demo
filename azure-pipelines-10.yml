@@ -21,4 +21,4 @@ steps:
 - task: AccessibilityScanner@1
   inputs:
     cavAccessibilityServiceConnection: '1st_AccessibilityTest'
-    targetUrl: 'https://netcloud4-15-u24.cav-test.com:4444/UnifiedDashboard/#/login'
+    targetUrl: 'https://netcloud4-15-u24.cav-test.com:4444'
