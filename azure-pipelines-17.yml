@@ -21,4 +21,4 @@ steps:
 - task: AccessibilityScanner@1
   inputs:
     cavAccessibilityServiceConnection: 'Accessibility_connection'
-    targetUrl: 'https://www.google.com/'
+    targetUrl: 'https://netcloud4-15-u24.cav-test.com:4444/UnifiedDashboard/#/home/load-test/welcome-page/txDetailFrmDevPortal/active'
