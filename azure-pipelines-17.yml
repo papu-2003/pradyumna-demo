@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: freetrial-admin-29123550190801-worker-1
+  name : Default
 
 steps:
 
