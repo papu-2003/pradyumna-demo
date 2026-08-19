@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: AccessibilityScanner@1
+  inputs:
+    cavAccessibilityServiceConnection: 'new-accessibility-connection'
+    targetUrl: 'https://10.10.50.18:4444/UnifiedDashboard/share.html?dashboardName=CLOUD_COST_EXPLORE_DRILLDOWN&preset=SPECIFIED_TIME_1787125645039_1787140045039'
